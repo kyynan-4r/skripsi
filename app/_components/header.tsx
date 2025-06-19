@@ -12,7 +12,7 @@ export function Header() {
             <li><a>Item 1</a></li>
             <li>
               <a>Parent</a>
-              <ul className="p-2">
+              <ul className="space-y-2 p-2">
                 <li><a>Submenu 1</a></li>
                 <li><a>Submenu 2</a></li>
               </ul>
@@ -37,8 +37,13 @@ export function Header() {
           <li><a>Item 3</a></li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="space-x-4 navbar-end">
         <a className="btn">Button</a>
+        <div className="avatar">
+          <div className="rounded-full w-10">
+            <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+          </div>
+        </div>
       </div>
     </div>
   )
