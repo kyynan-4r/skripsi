@@ -1,0 +1,316 @@
+import Image from "next/image";
+
+export default function HomePage() {
+  return (
+    <>
+      <header className="top-0 left-0 z-50 fixed bg-white shadow w-full h-15">
+        <div className="mx-auto sm:px-6 lg:px-8 max-w-screen-xl">
+          <div className="flex justify-between items-center h-16">
+            <div className="md:flex md:items-center md:gap-12">
+              <a className="block text-teal-600" href="#">
+                <span className="sr-only">Home</span>
+                <Image
+                  src="/home.svg"
+                  alt="Logo"
+                  width={32}
+                  height={32}
+                  className="w-auto h-8"
+                ></Image>
+              </a>
+            </div>
+
+            <div className="hidden md:block ml-50">
+              <div className="border-gray-100">
+                <nav className="flex gap-6 -mb-px" aria-label="Tabs">
+                  <a
+                    href="/profile.html"
+                    className="px-10 pb-1 hover:border-gray-300 border-transparent border-b-2 text-gray-500 hover:text-gray-700 text-base shrink-0"
+                  >
+                    Beranda
+                  </a>
+                  <a
+                    href="/profile.html"
+                    className="px-10 pb-1 hover:border-gray-300 border-transparent border-b-2 text-gray-500 hover:text-gray-700 text-base shrink-0"
+                  >
+                    Trending ✨
+                  </a>
+
+                  <a
+                    href="/about.html"
+                    className="px-10 pb-4 hover:border-gray-300 border-transparent border-b-2 text-gray-500 hover:text-gray-700 text-base shrink-0"
+                  >
+                    About
+                  </a>
+                </nav>
+              </div>
+            </div>
+            <div className="-mr-20">
+               <a 
+               className="group inline-block p-[2px] rounded-full focus:ring-1 hover:text-black"
+               href="#">
+                <span 
+                className="block bg-blue-500 group-hover:bg-blue-600 px-10 py-3 rounded-full font-medium text-sm"
+                >
+                  Mau Share apa nih?
+                  </span>
+              </a>
+            </div>
+{/* Profile sudut kanan */}
+            <div className="group relative bg-white -mr-10 rounded-lg text-gray-900 dropdown">
+              <button className="flex items-center gap-1 hover:brightness-75 transition duration-300">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="rounded-full size-10 object-cover"
+                />
+              </button>
+              <div className="hidden right-0 z-10 absolute group-focus-within:flex flex-col bg-white shadow-lg p-4 rounded-lg w-50">
+                    <a
+                      href="#"
+                      className="hover:bg-gray-300 px-4 py-2 rounded-lg"
+                    >
+                      Laporkan Postingan ini
+                    </a>
+                    <a
+                      href="#"
+                      className="hover:bg-gray-300 px-4 py-2 rounded-lg"
+                    >
+                      Item 2
+                    </a>
+                    <a
+                      href="#"
+                      className="hover:bg-gray-300 px-4 py-2 rounded-lg"
+                    >
+                      Item 3
+                    </a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      {/* Body */}
+      <main className="bg-sky-100 mt-6 overflow-y-hidden">
+        <div className="justify-center items-center gap-4 grid grid-cols-[1fr_2fr_1fr] mx-auto p-10 w-full h-full">
+          {/* side menu */}
+          <div className="-mt-2 mr-30 -ml-10 border-green-400 border-r h-full overflow-hidden">
+            <div className="-ml-15 px-20 py-3">
+              <ul className="space-y-1 mt-2">
+                <li>
+                 
+                </li>
+                <li>
+                  <h2 className="font-semibold text-gray-600 text-sm">Komunitas</h2>
+                  <a
+                    href="#"
+                    className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                  >
+                    Desain Grafis
+                  </a>
+                  <a
+                    href="#"
+                    className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                  >
+                    Videografi
+                  </a>
+                  <a
+                    href="#"
+                    className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                  >
+                    Fotografi
+                  </a>
+                  <a
+                    href="#"
+                    className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                  >
+                    Menulis
+                  </a>
+                </li>
+                <h2 className="mt-4 font-semibold text-gray-600 text-sm">
+                  Apa ya ini
+                </h2>
+                <li>
+                  <details className="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex justify-between items-center hover:bg-gray-100 px-4 py-2 rounded-lg text-gray-500 hover:text-gray-700 cursor-pointer">
+                      <span className="font-medium text-sm"> Teams </span>
+
+                      <span className="group-open:-rotate-180 transition duration-300 shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="size-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
+
+                    <ul className="space-y-1 mt-2 px-4">
+                      <li>
+                        <a
+                          href="#"
+                          className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                        >
+                          Banned Users
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                        >
+                          Calendar
+                        </a>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                  >
+                    Billing
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                  >
+                    Invoices
+                  </a>
+                </li>
+
+                <li>
+                  <details className="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex justify-between items-center hover:bg-gray-100 px-4 py-2 rounded-lg text-gray-500 hover:text-gray-700 cursor-pointer">
+                      <span className="font-medium text-sm"> Account </span>
+
+                      <span className="group-open:-rotate-180 transition duration-300 shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="size-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
+
+                    <ul className="space-y-1 mt-2 px-4">
+                      <li>
+                        <a
+                          href="#"
+                          className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                        >
+                          Details
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          className="block hover:bg-gray-100 px-4 py-2 rounded-lg font-medium text-gray-500 hover:text-gray-700 text-sm"
+                        >
+                          Security
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          href="#"
+                          className="hover:bg-gray-100 px-4 py-2 rounded-lg w-full font-medium text-gray-500 hover:text-gray-700 text-sm [text-align:_inherit]"
+                        >
+                          Logout
+                        </a>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Konten Utama */}
+          <div className="overflow-y-auto">
+            <div className="flex-1 h-full">
+              <div className="space-y-4 p-4">
+                <div className="flex justify-center items-center bg-white shadow-md p-6 rounded-lg w-full h-80">
+                  <div className="text-center">
+                    <h2 className="mb-4 font-bold text-gray-800 text-2xl">
+                      Konten Card 1
+                    </h2>
+                    <p className="text-gray-600">
+                      Ini adalah konten pertama yang dapat di-scroll
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center items-center bg-white shadow-md p-6 rounded-lg w-full h-80">
+                  <div className="text-center">
+                    <h2 className="mb-4 font-bold text-gray-800 text-2xl">
+                      Konten Card 2
+                    </h2>
+                    <p className="text-gray-600">
+                      Ini adalah konten kedua yang dapat di-scroll
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center items-center bg-white shadow-md p-6 rounded-lg w-full h-80">
+                  <div className="text-center">
+                    <h2 className="mb-4 font-bold text-gray-800 text-2xl">
+                      Konten Card 3
+                    </h2>
+                    <p className="text-gray-600">
+                      Ini adalah konten ketiga yang dapat di-scroll
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center items-center bg-white shadow-md p-6 rounded-lg w-full h-80">
+                  <div className="text-center">
+                    <h2 className="mb-4 font-bold text-gray-800 text-2xl">
+                      Konten Card 4
+                    </h2>
+                    <p className="text-gray-600">
+                      Ini adalah konten keempat yang dapat di-scroll
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center items-center bg-white shadow-md p-6 rounded-lg w-full h-80">
+                  <div className="text-center">
+                    <h2 className="mb-4 font-bold text-gray-800 text-2xl">
+                      Konten Card 5
+                    </h2>
+                    <p className="text-gray-600">
+                      Ini adalah konten kelima yang dapat di-scroll
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Side bar (kanan) */}
+          <div className="bg-white shadow-md mt-0 ml-30 rounded-lg h-full">
+          </div>
+          
+        </div>
+      </main>
+      </>
+    );
+  }
