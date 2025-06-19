@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       <header className="fixed top-0 left-0 w-full bg-white shadow z-50 h-15">
-        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
               <a className="block text-teal-600" href="#">
@@ -19,7 +19,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:block ml-50">
               <div className=" border-gray-100 ">
                 <nav className="-mb-px flex gap-6" aria-label="Tabs">
                   <a
@@ -44,39 +44,46 @@ export default function HomePage() {
                 </nav>
               </div>
             </div>
-
-            <div className="flex items-center gap-4">
-              <button
-                type="button"
-                className="overflow-hidden rounded-full border border-gray-300 shadow-inner"
-              >
-                <span className="sr-only">Toggle dashboard menu</span>
-
+            <div className=" -mr-20">
+               <a 
+               className="group inline-block rounded-full p-[2px] hover:text-black focus:ring-1"
+               href="#">
+                <span 
+                className="block rounded-full bg-blue-500 px-10 py-3 text-sm font-medium group-hover:bg-blue-600"
+                >
+                  Mau Share apa nih?
+                  </span>
+              </a>
+            </div>
+{/* Profile sudut kanan */}
+            <div className="dropdown relative group bg-white text-gray-900 rounded-lg -mr-10">
+              <button className="flex items-center gap-1 transition hover:brightness-75 transition duration-300">
                 <img
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt=""
-                  className="size-10 object-cover"
+                  className="size-10 object-cover rounded-full"
                 />
               </button>
-
-              <div className="block md:hidden">
-                <button className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </button>
-              </div>
+              <div className="bg-white absolute hidden group-focus-within:flex flex-col rounded-lg p-4 w-50 right-0 shadow-lg z-10">
+                    <a
+                      href="#"
+                      className="hover:bg-gray-300 px-4 py-2 rounded-lg"
+                    >
+                      Laporkan Postingan ini
+                    </a>
+                    <a
+                      href="#"
+                      className="hover:bg-gray-300 px-4 py-2 rounded-lg"
+                    >
+                      Item 2
+                    </a>
+                    <a
+                      href="#"
+                      className="hover:bg-gray-300 px-4 py-2 rounded-lg"
+                    >
+                      Item 3
+                    </a>
+                  </div>
             </div>
           </div>
         </div>
@@ -89,7 +96,10 @@ export default function HomePage() {
             <div className="px-20 py-3 -ml-15">
               <ul className="mt-2 space-y-1">
                 <li>
-                  <h2 class="text-sm font-semibold text-gray-600">Komunitas</h2>
+                 
+                </li>
+                <li>
+                  <h2 className="text-sm font-semibold text-gray-600">Komunitas</h2>
                   <a
                     href="#"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
@@ -115,7 +125,7 @@ export default function HomePage() {
                     Menulis
                   </a>
                 </li>
-                <h2 class="text-sm font-semibold text-gray-600 mt-4">
+                <h2 className="text-sm font-semibold text-gray-600 mt-4">
                   Apa ya ini
                 </h2>
                 <li>
@@ -235,58 +245,58 @@ export default function HomePage() {
           </div>
           {/* Konten Utama */}
           <div className="overflow-y-auto">
-            <div class="flex-1 h-full">
-              <div class="p-4 space-y-4">
-                <div class="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
-                  <div class="text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            <div className="flex-1 h-full">
+              <div className="p-4 space-y-4">
+                <div className="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
                       Konten Card 1
                     </h2>
-                    <p class="text-gray-600">
+                    <p className="text-gray-600">
                       Ini adalah konten pertama yang dapat di-scroll
                     </p>
                   </div>
                 </div>
 
-                <div class="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
-                  <div class="text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <div className="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
                       Konten Card 2
                     </h2>
-                    <p class="text-gray-600">
+                    <p className="text-gray-600">
                       Ini adalah konten kedua yang dapat di-scroll
                     </p>
                   </div>
                 </div>
 
-                <div class="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
-                  <div class="text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <div className="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
                       Konten Card 3
                     </h2>
-                    <p class="text-gray-600">
+                    <p className="text-gray-600">
                       Ini adalah konten ketiga yang dapat di-scroll
                     </p>
                   </div>
                 </div>
 
-                <div class="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
-                  <div class="text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <div className="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
                       Konten Card 4
                     </h2>
-                    <p class="text-gray-600">
+                    <p className="text-gray-600">
                       Ini adalah konten keempat yang dapat di-scroll
                     </p>
                   </div>
                 </div>
 
-                <div class="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
-                  <div class="text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <div className="flex justify-center items-center h-80 w-full bg-white shadow-md rounded-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
                       Konten Card 5
                     </h2>
-                    <p class="text-gray-600">
+                    <p className="text-gray-600">
                       Ini adalah konten kelima yang dapat di-scroll
                     </p>
                   </div>
@@ -296,9 +306,10 @@ export default function HomePage() {
           </div>
 
           {/* Side bar (kanan) */}
-          <div className="h-full ml-30 mt-0 bg-white shadow-md rounded-lg"></div>
+          <div className="h-full ml-30 mt-0 bg-white shadow-md rounded-lg">
+          </div>
+          
         </div>
       </main>
     </>
   );
-}
