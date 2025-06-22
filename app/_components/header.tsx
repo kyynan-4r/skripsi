@@ -196,7 +196,7 @@ export function Header() {
             className="text-lg font-semibold font-sans space-y-6 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-2xl bg-base-100 rounded-box w-60 h-29"
           >
             <li>
-              <a href="#">
+              <a href="/Profile">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
