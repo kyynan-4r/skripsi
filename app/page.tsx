@@ -11,7 +11,7 @@ export default function HomePage() {
 
         <div className="space-y-4">
           {[1, 2, 3, 4, 5].map((index) => (
-            <div key={index} className="max-w-lg">
+            <div key={index} className="w-136">
               <div className="bg-white shadow-lg mt-5 card">
                 <div className="flex items-between gap-4 card-body">
                   <div className="flex items-start gap-2">
