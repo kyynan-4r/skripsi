@@ -45,7 +45,7 @@ export function AdminLeft() {
               <span>📢</span> Pengumuman
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="/admin/log" className="btn btn-ghost justify-start">
               <span>🧾</span> Log Aktivitas
             </a>
@@ -54,7 +54,7 @@ export function AdminLeft() {
             <a href="/admin/feedback" className="btn btn-ghost justify-start">
               <span>📬</span> Feedback
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

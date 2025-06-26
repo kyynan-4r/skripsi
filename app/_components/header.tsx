@@ -84,7 +84,7 @@ export function Header() {
             </div>
           </li>
 
-          <li className="!mb-[-16px]">
+          {/* <li className="!mb-[-16px]">
             <div
               className="tooltip tooltip-bottom hover:rounded-none transition-all duration-200"
               data-tip="Forum Diskusi"
@@ -125,7 +125,7 @@ export function Header() {
                 </svg>
               </a>
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="space-x-2 navbar-end ">
