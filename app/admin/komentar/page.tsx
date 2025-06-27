@@ -1,28 +1,29 @@
 import { AdminLeft } from "@/app/_components/adminLeft";
+import Link from "next/link";
 
 export default function Komentar() {
   return (
     <>
-      <main className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+      <main className="flex lg:flex-row flex-col bg-gray-100 min-h-screen">
         <AdminLeft />
-        <div className="p-6 rounded-lg shadow-md w-screen">
-          <h2 className="text-2xl font-bold mb-4">🚩 Komentar Dilaporkan</h2>
+        <div className="shadow-md p-6 rounded-lg w-screen">
+          <h2 className="mb-4 font-bold text-2xl">🚩 Komentar Dilaporkan</h2>
 
           {/* Info ringkas */}
-          <div className="alert alert-warning mb-4">
+          <div className="mb-4 alert alert-warning">
             <span>
               Menampilkan hanya komentar yang telah dilaporkan oleh pengguna.
             </span>
           </div>
 
           {/* Filter pencarian */}
-          <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
+          <div className="flex flex-wrap justify-between items-center gap-4 mb-4">
             <input
               type="text"
               placeholder="Cari komentar atau pengguna..."
-              className="input input-bordered w-full max-w-sm"
+              className="input-bordered w-full max-w-sm input"
             />
-            <select className="select select-bordered">
+            <select className="select-bordered select">
               <option>Urutkan: Terbaru</option>
               <option>Urutkan: Terlama</option>
               <option>Urutkan: Paling banyak laporan</option>
@@ -38,7 +39,6 @@ export default function Komentar() {
                   <th>Komentar</th>
                   <th>Pengguna</th>
                   <th>Jumlah Laporan</th>
-                  <th>Di Postingan</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -51,11 +51,10 @@ export default function Komentar() {
                   <td>
                     <span className="badge badge-error">3 Laporan</span>
                   </td>
-                  <td>
-                    <a className="link text-blue-500">Lihat Karya</a>
-                  </td>
                   <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
+                    <Link href="/admin/komentar/123">
+                      <button className="btn btn-xs btn-info">Detail</button>
+                    </Link>
                     <button className="btn btn-xs btn-error">Hapus</button>
                     <button className="btn btn-xs btn-success">
                       Tandai Aman
@@ -70,9 +69,6 @@ export default function Komentar() {
                   <td>@iklanmurahan</td>
                   <td>
                     <span className="badge badge-error">5 Laporan</span>
-                  </td>
-                  <td>
-                    <a className="link text-blue-500">Lihat Karya</a>
                   </td>
                   <td className="space-x-1">
                     <button className="btn btn-xs btn-info">Detail</button>

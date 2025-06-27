@@ -1,102 +1,68 @@
+"use client";
 import { AdminLeft } from "@/app/_components/adminLeft";
+import Link from "next/link";
 
 export default function Laporan() {
+  const laporan = [
+    {
+      jenis: "komentar",
+      id: "komentar123",
+      isi: "Komentar tidak sopan pada karya Ramadhan.",
+      pelapor: "@rani",
+    },
+    {
+      jenis: "postingan",
+      id: "post456",
+      isi: "Postingan berisi konten plagiat.",
+      pelapor: "@budi",
+    },
+    {
+      jenis: "pengguna",
+      id: "user789",
+      isi: "Akun ini sering spam di kolom komentar.",
+      pelapor: "@salsa",
+    },
+  ];
   return (
     <>
-      <main className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+      <main className="flex lg:flex-row flex-col bg-gray-100 min-h-screen">
         <AdminLeft />
-        <div className="p-6 rounded-lg shadow-md w-screen">
-          <h2 className="text-2xl font-bold mb-4">🚨 Laporan Masuk</h2>
-
-          {/* Filter */}
-          <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
-            <select className="select select-bordered">
-              <option>Semua Jenis</option>
-              <option>Karya</option>
-              <option>Komentar</option>
-              <option>Pengguna</option>
-            </select>
-            <select className="select select-bordered">
-              <option>Status: Semua</option>
-              <option>Pending</option>
-              <option>Ditindaklanjuti</option>
-              <option>Diabaikan</option>
-            </select>
-          </div>
-
-          {/* Tabel Laporan */}
+        <div className="shadow-md p-6 rounded-lg w-screen">
+          <h2 className="mb-4 font-bold text-2xl">🚨 Daftar Laporan Masuk</h2>
           <div className="overflow-x-auto">
-            <table className="table table-zebra text-sm">
-              <thead className="bg-base-200 text-base-content">
+            <table className="table table-zebra w-full">
+              <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Pelapor</th>
                   <th>Jenis</th>
-                  <th>Alasan</th>
-                  <th>Target</th>
-                  <th>Status</th>
+                  <th>Isi Laporan</th>
+                  <th>Pelapor</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
-                {/* Baris 1 */}
-                <tr>
-                  <td>1</td>
-                  <td>@nandakreatif</td>
-                  <td>
-                    <span className="badge badge-warning">Komentar</span>
-                  </td>
-                  <td>"Komentar mengandung kata kasar"</td>
-                  <td>
-                    <a className="link text-blue-500">Lihat Komentar</a>
-                  </td>
-                  <td>
-                    <span className="badge badge-info">Pending</span>
-                  </td>
-                  <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
-                    <button className="btn btn-xs btn-success">Tindak</button>
-                    <button className="btn btn-xs btn-ghost">Abaikan</button>
-                  </td>
-                </tr>
+                {laporan.map((item, i) => {
+                  const link =
+                    item.jenis === "komentar"
+                      ? `/admin/komentar/${item.id}`
+                      : item.jenis === "postingan"
+                      ? `/admin/postingan/${item.id}`
+                      : `/admin/pengguna/${item.id}`;
 
-                {/* Baris 2 */}
-                <tr>
-                  <td>2</td>
-                  <td>@gzt</td>
-                  <td>
-                    <span className="badge badge-error">Karya</span>
-                  </td>
-                  <td>"Karya plagiat, mirip dari Behance"</td>
-                  <td>
-                    <a className="link text-blue-500">Lihat Karya</a>
-                  </td>
-                  <td>
-                    <span className="badge badge-success">Ditindaklanjuti</span>
-                  </td>
-                  <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
-                  </td>
-                </tr>
-
-                {/* Baris 3 */}
-                <tr>
-                  <td>3</td>
-                  <td>@anonzz</td>
-                  <td>
-                    <span className="badge badge-neutral">Pengguna</span>
-                  </td>
-                  <td>"Mengirim spam di komentar"</td>
-                  <td>
-                    <a className="link text-blue-500">@akunberisik</a>
-                  </td>
-                  <td>
-                    <span className="badge badge-error">Diabaikan</span>
-                  </td>
-                  <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
-                  </td>
-                </tr>
+                  return (
+                    <tr key={i}>
+                      <td className="capitalize">{item.jenis}</td>
+                      <td>{item.isi}</td>
+                      <td>{item.pelapor}</td>
+                      <td>
+                        <Link href={link}>
+                          <button className="btn btn-xs btn-info">
+                            Detail
+                          </button>
+                        </Link>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
