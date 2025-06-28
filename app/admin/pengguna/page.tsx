@@ -16,7 +16,6 @@ export default function Pengguna() {
               placeholder="Cari pengguna..."
               className="mb-4 input-bordered w-full max-w-xs input"
             />
-
             <table className="table table-zebra">
               <thead>
                 <tr>
@@ -30,6 +29,7 @@ export default function Pengguna() {
                 </tr>
               </thead>
               <tbody>
+                {/* Contoh baris statis */}
                 <tr>
                   <th>1</th>
                   <td>
@@ -45,16 +45,36 @@ export default function Pengguna() {
                     <span className="badge badge-success">Aktif</span>
                   </td>
                   <td className="space-x-2">
-                    {/* Link ke detail */}
                     <Link href="/admin/pengguna/123">
                       <button className="btn btn-xs btn-info">Detail</button>
                     </Link>
-                    <button className="btn btn-xs btn-warning">
-                      Suspend
-                    </button>
+                    <button className="btn btn-xs btn-warning">Suspend</button>
                     <button className="btn btn-xs btn-error">Hapus</button>
                   </td>
                 </tr>
+                {/* Contoh baris dinamis */}
+                {[2, 3, 4, 5].map((index) => (
+                  <tr key={index}>
+                    <th>{index}</th>
+                    <td>
+                      <img
+                        src="https://i.pravatar.cc/40?img=" + {index}
+                        className="rounded-full w-10 h-10"
+                      />
+                    </td>
+                    <td>@ayuDesign{index}</td>
+                    <td>ayu{index}@email.com</td>
+                    <td>User</td>
+                    <td>
+                      <span className="badge badge-success">Aktif</span>
+                    </td>
+                    <td className="space-x-2">
+                      <button className="btn btn-xs btn-info">Detail</button>
+                      <button className="btn btn-xs btn-warning">Suspend</button>
+                      <button className="btn btn-xs btn-error">Hapus</button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
