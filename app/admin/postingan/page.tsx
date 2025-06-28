@@ -48,8 +48,8 @@ export default function Pengguna() {
                       className="rounded-md w-14 h-14"
                     />
                   </td>
-                  <td>Poster Ramadan Ceria</td>
-                  <td>@genzku</td>
+                  <td>Poster Kreatif Ramadhan</td>
+                  <td>@ayudesain</td>
                   <td>120 ❤️</td>
                   <td>
                     <span className="badge badge-success">Aktif</span>
@@ -58,35 +58,8 @@ export default function Pengguna() {
                     <Link href="/admin/postingan/123">
                       <button className="btn btn-xs btn-info">Detail</button>
                     </Link>
+                    <button className="btn btn-xs btn-accent">Sembunyikan</button>
                     <button className="btn btn-xs btn-error">Hapus</button>
-                    <button className="btn btn-xs btn-warning">Arsip</button>
-                    <button className="btn btn-xs btn-primary">
-                      Unggulkan
-                    </button>
-                  </td>
-                </tr>
-
-                {/* Baris 2 */}
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <img
-                      src="https://source.unsplash.com/random/100x101"
-                      className="rounded-md w-14 h-14"
-                    />
-                  </td>
-                  <td>Ilustrasi Malam</td>
-                  <td>@nandakreatif</td>
-                  <td>45 ❤️</td>
-                  <td>
-                    <span className="badge badge-error">Dilaporkan</span>
-                  </td>
-                  <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
-                    <button className="btn btn-xs btn-error">Hapus</button>
-                    <button className="btn btn-xs btn-success">
-                      Tandai Aman
-                    </button>
                   </td>
                 </tr>
               </tbody>

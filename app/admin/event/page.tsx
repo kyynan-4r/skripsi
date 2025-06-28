@@ -34,36 +34,23 @@ export default function Event() {
               </thead>
               <tbody>
                 <tr>
-                  <td>Lomba Poster Kemerdekaan</td>
+                  <td>Ramaikan Event Ramadhan 2025</td>
                   <td>1–17 Agustus 2025</td>
                   <td>
-                    <span className="badge badge-info">🇮🇩 Pahlawan Desain</span>
+                    <span className="badge badge-warning">
+                      🌙 Ramadhan 2025
+                    </span>
                   </td>
                   <td>
                     <span className="badge badge-success">Aktif</span>
                   </td>
                   <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
+                    <Link href="/admin/event/1">
+                      <button className="btn btn-xs btn-info">Detail</button>
+                    </Link>
                     <button className="btn btn-xs btn-warning">
                       Tutup Event
                     </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Challenge Vector Ramadhan</td>
-                  <td>10–20 Maret 2025</td>
-                  <td>
-                    <span className="badge badge-warning">
-                      🌙 Vector Ramadan
-                    </span>
-                  </td>
-                  <td>
-                    <span className="badge badge-neutral">Selesai</span>
-                  </td>
-                  <td className="space-x-1">
-                     <Link href="/admin/event/1">
-                      <button className="btn btn-xs btn-info">Detail</button>
-                    </Link>
                   </td>
                 </tr>
               </tbody>

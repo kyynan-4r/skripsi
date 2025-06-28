@@ -10,18 +10,6 @@ export default function Laporan() {
       isi: "Komentar tidak sopan pada karya Ramadhan.",
       pelapor: "@rani",
     },
-    {
-      jenis: "postingan",
-      id: "post456",
-      isi: "Postingan berisi konten plagiat.",
-      pelapor: "@budi",
-    },
-    {
-      jenis: "pengguna",
-      id: "user789",
-      isi: "Akun ini sering spam di kolom komentar.",
-      pelapor: "@salsa",
-    },
   ];
   return (
     <>

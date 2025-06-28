@@ -6,7 +6,7 @@ export default function DetailPengguna() {
 
   const dummyUser = {
     nama: 'wahuydi',
-    avatar: 'https://i.pravatar.cc/100?u=wahuydi',
+    avatar: 'https://img.daisyui.com/images/profile/demo/yellingcat@192.webp',
     joinDate: '30 Januari 2025',
     status: 'Aktif',
     totalPostingan: 8,

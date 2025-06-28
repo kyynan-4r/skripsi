@@ -9,7 +9,7 @@ export default function Badge() {
         <div className="shadow-md p-6 rounded-lg w-screen">
           <h2 className="mb-6 font-bold text-2xl">🏅 Manajemen Badge</h2>
 
-          {/* Tabs */}
+          {/* Tabs
           <div role="tablist" className="mb-4 tabs-bordered tabs">
             <a role="tab" className="tab tab-active">
               Default Badge
@@ -17,7 +17,7 @@ export default function Badge() {
             <a role="tab" className="tab">
               Event Badge
             </a>
-          </div>
+          </div> */}
 
           {/* === Tab: Default Badge === */}
           <div className="mb-8">
@@ -33,31 +33,16 @@ export default function Badge() {
               <table className="table table-zebra text-sm">
                 <thead className="bg-base-200">
                   <tr>
-                    <th>Ikon</th>
-                    <th>Nama</th>
+                    <th>Badge</th>
                     <th>Kriteria</th>
-                    <th>Total Pemilik</th>
-                    <th>Status</th>
+                    <th>Deskripsi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>🎨</td>
-                    <td>Kreator Aktif</td>
+                    <td className="bg-blue-100 px-4 py-4 text-blue-800 badge badge-soft badge-sm">🎨 Kreator Aktif</td>
                     <td>Upload 5 karya</td>
-                    <td>34 pengguna</td>
-                    <td>
-                      <span className="badge badge-success">Aktif</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>💬</td>
-                    <td>Rajin Komentar</td>
-                    <td>Komentar 10 kali</td>
-                    <td>21 pengguna</td>
-                    <td>
-                      <span className="badge badge-success">Aktif</span>
-                    </td>
+                    <td>Pengguna harus melakukan Upload sebanyak 5 kali </td>
                   </tr>
                 </tbody>
               </table>
@@ -79,31 +64,20 @@ export default function Badge() {
               <table className="table table-zebra text-sm">
                 <thead className="bg-base-200">
                   <tr>
-                    <th>Ikon</th>
-                    <th>Nama</th>
+                    <th>Badge</th>
                     <th>Deskripsi</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>🌙</td>
-                    <td>Pemenang Ramadan</td>
-                    <td>Juara lomba desain Ramadan 2025</td>
+                    <td className="bg-yellow-100 px-4 py-4 text-yellow-800 badge badge-soft badge-sm">🌙 Ramadhan 2025</td>
+                    <td>Meramaikan Event Ramadan 2025</td>
                     <td className="space-x-1">
                       <Link href="/admin/badge/1">
                         <button className="btn btn-xs btn-info">Edit</button>
                       </Link>
 
-                      <button className="btn btn-xs btn-error">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>🎤</td>
-                    <td>Kontributor Webinar</td>
-                    <td>Menjadi pembicara di event komunitas</td>
-                    <td className="space-x-1">
-                      <button className="btn btn-xs btn-info">Edit</button>
                       <button className="btn btn-xs btn-error">Hapus</button>
                     </td>
                   </tr>

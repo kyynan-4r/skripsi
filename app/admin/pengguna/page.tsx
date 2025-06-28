@@ -34,7 +34,7 @@ export default function Pengguna() {
                   <th>1</th>
                   <td>
                     <img
-                      src="https://i.pravatar.cc/40"
+                      src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp"
                       className="rounded-full w-10 h-10"
                     />
                   </td>

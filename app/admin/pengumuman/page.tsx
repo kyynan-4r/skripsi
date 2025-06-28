@@ -25,7 +25,6 @@ export default function Badge() {
                 <tr>
                   <th>📛 Judul</th>
                   <th>Isi Pengumuman</th>
-                  <th>📅 Tanggal</th>
                   <th>📌 Status</th>
                   <th>⚙️ Aksi</th>
                 </tr>
@@ -34,7 +33,6 @@ export default function Badge() {
                 <tr>
                   <td>Fitur Komentar Sudah Tersedia!</td>
                   <td>Fitur komentar udah tersedia nih, gas cobain</td>
-                  <td>23 Juni 2025</td>
                   <td>
                     <span className="badge badge-success">Aktif</span>
                   </td>
@@ -46,18 +44,6 @@ export default function Badge() {
                       Nonaktifkan
                     </button>
                     <button className="btn btn-xs btn-error">Hapus</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Maintenance Server</td>
-                  <td>Website sedang dalam perbaikan, sabar ya</td>
-                  <td>18 Juni 2025</td>
-                  <td>
-                    <span className="badge badge-neutral">Nonaktif</span>
-                  </td>
-                  <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Edit</button>
-                    <button className="btn btn-xs btn-ghost">Hapus</button>
                   </td>
                 </tr>
               </tbody>

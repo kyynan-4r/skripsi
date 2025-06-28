@@ -13,8 +13,8 @@ export default function EditBadgeEvent() {
     // Simulasi fetch data dari ID
     // Nanti bisa ganti ini dengan ambil data dari server
     const dataDummy = {
-      nama: "🎖️ Peserta Ramadan 2025",
-      deskripsi: "Diberikan kepada pengguna yang ikut Event Ramadan 2025.",
+      nama: " 🌙 Ramadan 2025",
+      deskripsi: "Meramaikan Event Ramadan 2025.",
     };
 
     setNama(dataDummy.nama);

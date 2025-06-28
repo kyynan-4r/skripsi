@@ -61,23 +61,6 @@ export default function Komentar() {
                     </button>
                   </td>
                 </tr>
-
-                {/* Baris 2 */}
-                <tr>
-                  <td>2</td>
-                  <td>"Spam link: bit.ly/iklan123"</td>
-                  <td>@iklanmurahan</td>
-                  <td>
-                    <span className="badge badge-error">5 Laporan</span>
-                  </td>
-                  <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
-                    <button className="btn btn-xs btn-error">Hapus</button>
-                    <button className="btn btn-xs btn-success">
-                      Tandai Aman
-                    </button>
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>

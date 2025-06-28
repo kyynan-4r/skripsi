@@ -7,6 +7,7 @@ export default function DetailKomentar() {
   // Data dummy
   const komentar = {
     isi: '"Desain kamu norak, out of trend!"',
+    oleh:'@userrandom',
     tanggal: '27 Juni 2025, 14:05',
     pelapor: 3,
     status: 'Belum Ditinjau',
@@ -28,7 +29,8 @@ export default function DetailKomentar() {
 
       <div className="mb-4">
         <p className="text-gray-800 italic">"{komentar.isi}"</p>
-        <p className="mt-1 text-gray-500 text-sm">Dikirim pada: {komentar.tanggal}</p>
+        <p className="mt-1 text-gray-500 text-sm">Dikirim pada {komentar.tanggal}</p>
+        <p className="mt-1 text-gray-500 text-sm">Oleh {komentar.oleh}</p>
         <p className="mt-1 text-red-500 text-sm">{komentar.pelapor} Laporan</p>
       </div>
 
