@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <div className="top-0 z-20 sticky bg-white shadow-lg navbar ">
+    <div className="top-0 z-20 sticky bg-white shadow-lg navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="lg:hidden btn btn-ghost">
@@ -25,17 +25,17 @@ export function Header() {
       </div>
 
       <div className="hidden lg:flex navbar-center">
-        <ul className="px-1 menu menu-horizontal space-x-15">
-          <li className="!border-b-2 !border-blue-500 !mb-[-16px]">
+        <ul className="space-x-15 px-1 menu menu-horizontal">
+          <li className="!mb-[-16px] !border-b-2 !border-blue-500">
             <div
-              className="tooltip tooltip-bottom hover:rounded-none transition-all duration-200"
+              className="tooltip-bottom hover:rounded-none transition-all duration-200 tooltip"
               data-tip="Beranda"
             >
-              <a href="/" className="p-2 block px-10">
+              <a href="/" className="block p-2 px-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-6 h-6 text-blue-500 fill-current"
+                  className="fill-current w-6 h-6 text-blue-500"
                 >
                   <g>
                     <path
@@ -57,17 +57,17 @@ export function Header() {
           </li>
           <li className="!mb-[-16px]">
             <div
-              className="tooltip tooltip-bottom hover:rounded-none transition-all duration-200"
+              className="tooltip-bottom hover:rounded-none transition-all duration-200 tooltip"
               data-tip="Leaderboard"
             >
               <a
-                href="/Leaderboard"
-                className="p-2 block px-10 hover:rounded-none transition"
+                href="/leaderboard"
+                className="block p-2 px-10 hover:rounded-none transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-6 h-6 text-blue-500 fill-current"
+                  className="fill-current w-6 h-6 text-blue-500"
                 >
                   <path
                     d="M0 0 C49.685625 -0.12375 49.685625 -0.12375 100.375 -0.25 C110.82978027 -0.28641602 121.28456055 -0.32283203 132.05615234 -0.36035156 C144.83325195 -0.37841797 144.83325195 -0.37841797 150.81680298 -0.3817749 C154.99145021 -0.38549804 159.16589351 -0.40047407 163.34048462 -0.42230225 C168.67096179 -0.44980375 174.00114377 -0.45795264 179.3316853 -0.4522891 C181.28452433 -0.45347283 183.23737401 -0.46136631 185.19015193 -0.47686052 C206.92084609 -0.64122578 206.92084609 -0.64122578 213.91531944 5.75017929 C218.40318414 10.52872409 220.28875827 15.23225575 220.375 21.8125 C220.40335938 22.78832031 220.43171875 23.76414062 220.4609375 24.76953125 C219.38660866 32.29893761 215.07246913 37.50593896 209.73046875 42.625 C208.83162712 43.51179443 208.83162712 43.51179443 207.91462708 44.41650391 C206.01491948 46.28747928 204.10205109 48.14422793 202.1875 50 C200.28632819 51.85829916 198.38813377 53.71954016 196.49250793 55.58349609 C195.31862643 56.73612319 194.14123299 57.88519015 192.95951843 59.02978516 C190.09733224 61.82403792 187.38259198 64.67402959 184.78051758 67.71289062 C180.55690349 72.60083896 175.98304514 77.12984944 171.39924622 81.67591858 C169.80646509 83.25573133 168.21700843 84.83882586 166.6282959 86.42272949 C162.68485384 90.35292659 158.73593714 94.27760772 154.78717041 98.20245361 C151.43860973 101.53115714 148.09219307 104.86198931 144.74848938 108.1955719 C143.19584762 109.74181555 141.64018597 111.2849738 140.08435059 112.82800293 C135.37718864 117.5110533 130.80083833 122.24640057 126.48129272 127.29162598 C124.40473808 129.68651522 122.18949482 131.92285482 119.94140625 134.15625 C119.06162109 135.0328125 118.18183594 135.909375 117.27539062 136.8125 C116.38013672 137.699375 115.48488281 138.58625 114.5625 139.5 C113.64017578 140.4178125 112.71785156 141.335625 111.76757812 142.28125 C109.51400101 144.52315055 107.25810925 146.762666 105 149 C106.57885475 152.89431805 109.24101735 155.48198787 112.19921875 158.359375 C112.71249222 158.8674469 113.22576569 159.3755188 113.7545929 159.89898682 C115.39419699 161.52083649 117.04031153 163.1358566 118.6875 164.75 C120.31602038 166.35064721 121.94296036 167.95281974 123.56684875 169.5581665 C124.57470691 170.55404396 125.58521879 171.54724694 126.5990448 172.53704834 C129.25010945 175.15154833 131.74722923 177.83831224 134.16918945 180.66699219 C138.41373826 185.56639977 143.00099118 190.11401715 147.60075378 194.67591858 C149.19353491 196.25573133 150.78299157 197.83882586 152.3717041 199.42272949 C155.74497313 202.78466861 159.12217602 206.14263819 162.5 209.5 C166.41971835 213.39597349 170.33772742 217.29363538 174.25151062 221.1955719 C175.80415238 222.74181555 177.35981403 224.2849738 178.91564941 225.82800293 C183.61901657 230.50738638 188.18480241 235.24150328 192.50076294 240.28259277 C194.66143143 242.75768345 196.99136148 245.03281722 199.35546875 247.3125 C200.31749275 248.25215855 201.27906837 249.19227633 202.24023438 250.1328125 C203.71674054 251.57222793 205.19607355 253.00823352 206.68334961 254.43652344 C219.0350231 266.32366527 219.0350231 266.32366527 220.53125 275.125 C220.44024728 283.49725069 219.15727337 288.77097041 213.25 294.8125 C206.8457353 299.12306278 201.00937897 300.44832271 193.3692627 300.36076355 C192.12467789 300.36461563 192.12467789 300.36461563 190.85494995 300.36854553 C188.08604151 300.37348262 185.31768622 300.35698808 182.54882812 300.34057617 C180.52536791 300.33965655 178.50190674 300.34005869 176.47844696 300.34167194 C171.0712626 300.34234781 165.66427835 300.32499005 160.25714111 300.30384064 C155.17890814 300.28672599 150.10072325 300.28594966 145.02246094 300.28381348 C130.18161423 300.26808624 115.34080457 300.22620263 100.5 300.1875 C50.7525 300.0946875 50.7525 300.0946875 0 300 C0 201 0 102 0 0 Z "
@@ -86,17 +86,17 @@ export function Header() {
 
           {/* <li className="!mb-[-16px]">
             <div
-              className="tooltip tooltip-bottom hover:rounded-none transition-all duration-200"
+              className="tooltip-bottom hover:rounded-none transition-all duration-200 tooltip"
               data-tip="Forum Diskusi"
             >
               <a
                 href="/Forum"
-                className="p-2 block px-10 hover:rounded-none transition"
+                className="block p-2 px-10 hover:rounded-none transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-6 h-6 text-blue-500 fill-current"
+                  className="fill-current w-6 h-6 text-blue-500"
                 >
                   <g>
                     <path
@@ -128,15 +128,15 @@ export function Header() {
           </li> */}
         </ul>
       </div>
-      <div className="space-x-2 navbar-end ">
+      <div className="space-x-2 navbar-end">
         <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-md btn-circle ">
-            <div className="w-10 rounded-full hover:brightness-75 flex items-center justify-center">
+          <div tabIndex={0} role="button" className="btn btn-md btn-circle">
+            <div className="flex justify-center items-center hover:brightness-75 rounded-full w-10">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-6 h-6 fill-current"
+                  className="fill-current w-6 h-6"
                 >
                   <g>
                     <path
@@ -158,7 +158,7 @@ export function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52"
+            className="z-[1] bg-base-100 shadow-lg mt-3 p-2 rounded-box w-52 menu menu-sm dropdown-content"
           >
             <li>
               <a>Profile</a>
@@ -172,26 +172,26 @@ export function Header() {
           </ul>
         </div>
 
-        <div className="dropdown dropdown-end mr-5">
+        <div className="mr-5 dropdown dropdown-end">
           <div
             tabIndex={0}
             role="button"
             className="btn btn-md btn-ghost btn-circle avatar"
           >
-            <div className="w-10 rounded-full hover:brightness-75">
+            <div className="hover:brightness-75 rounded-full w-10">
               <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
             </div>
           </div>
           <ul
             tabIndex={0}
-            className="text-lg font-semibold font-sans space-y-6 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-2xl bg-base-100 rounded-box w-60 h-29"
+            className="z-[1] space-y-6 bg-base-100 shadow-2xl mt-3 p-2 rounded-box w-60 h-29 font-sans font-semibold text-lg menu menu-sm dropdown-content"
           >
             <li>
-              <a href="/Profile">
+              <a href="/profile">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-5 h-5 fill-current"
+                  className="fill-current w-5 h-5"
                 >
                   <g>
                     <path
@@ -212,7 +212,7 @@ export function Header() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-4 h-4 fill-current"
+                  className="fill-current w-4 h-4"
                 >
                   <g>
                     <path
@@ -229,7 +229,7 @@ export function Header() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
-                  className="w-5 h-5 fill-current"
+                  className="fill-current w-5 h-5"
                 >
                   <g>
                     <path

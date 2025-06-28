@@ -1,21 +1,22 @@
 import { AdminLeft } from "@/app/_components/adminLeft";
+import Link from "next/link";
 
 export default function Pengguna() {
   return (
     <>
-      <main className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+      <main className="flex lg:flex-row flex-col bg-gray-100 min-h-screen">
         <AdminLeft />
-        <div className="p-6 rounded-lg shadow-md w-screen">
-          <h2 className="text-2xl font-bold mb-4">📁 Daftar Postingan</h2>
+        <div className="shadow-md p-6 rounded-lg w-screen">
+          <h2 className="mb-4 font-bold text-2xl">📁 Daftar Postingan</h2>
 
           {/* Filter & Search */}
-          <div className="flex flex-wrap items-center justify-between mb-4 gap-4">
+          <div className="flex flex-wrap justify-between items-center gap-4 mb-4">
             <input
               type="text"
               placeholder="Cari judul atau pengguna..."
-              className="input input-bordered w-full max-w-sm"
+              className="input-bordered w-full max-w-sm input"
             />
-            <select className="select select-bordered">
+            <select className="select-bordered select">
               <option>Status: Semua</option>
               <option>Aktif</option>
               <option>Dilaporkan</option>
@@ -44,7 +45,7 @@ export default function Pengguna() {
                   <td>
                     <img
                       src="https://source.unsplash.com/random/100x100"
-                      className="w-14 h-14 rounded-md"
+                      className="rounded-md w-14 h-14"
                     />
                   </td>
                   <td>Poster Ramadan Ceria</td>
@@ -54,7 +55,9 @@ export default function Pengguna() {
                     <span className="badge badge-success">Aktif</span>
                   </td>
                   <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
+                    <Link href="/admin/postingan/123">
+                      <button className="btn btn-xs btn-info">Detail</button>
+                    </Link>
                     <button className="btn btn-xs btn-error">Hapus</button>
                     <button className="btn btn-xs btn-warning">Arsip</button>
                     <button className="btn btn-xs btn-primary">
@@ -69,7 +72,7 @@ export default function Pengguna() {
                   <td>
                     <img
                       src="https://source.unsplash.com/random/100x101"
-                      className="w-14 h-14 rounded-md"
+                      className="rounded-md w-14 h-14"
                     />
                   </td>
                   <td>Ilustrasi Malam</td>

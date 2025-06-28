@@ -1,4 +1,6 @@
+'use client'
 import { AdminLeft } from "@/app/_components/adminLeft";
+import Link from "next/link";
 
 export default function Pengguna() {
   return (
@@ -14,19 +16,19 @@ export default function Pengguna() {
               placeholder="Cari pengguna..."
               className="mb-4 input-bordered w-full max-w-xs input"
             />
-            <table className="table table-zebra">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Profil</th>
-                  <th>Username</th>
-                  <th>Email</th>
-                  <th>Role</th>
-                  <th>Status</th>
-                  <th>Aksi</th>
-                </tr>
-              </thead>
-              {[1, 2, 3, 4, 5].map((index) => (
+              <table className="table table-zebra">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Profil</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                {[1, 2, 3, 4, 5].map((index) => (
                 <tbody key={index} >
                   <tr>
                     <th>1</th>
@@ -52,9 +54,9 @@ export default function Pengguna() {
                   </tr>
                   {/* Tambah baris lainnya */}
                 </tbody>
-              ))}
-            </table>
-
+                ))}
+              </table>
+            
           </div>
         </div>
       </main>
