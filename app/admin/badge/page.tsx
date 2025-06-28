@@ -91,9 +91,9 @@ export default function Badge() {
                     <td>Pemenang Ramadan</td>
                     <td>Juara lomba desain Ramadan 2025</td>
                     <td className="space-x-1">
-                      <link href={`/admin/badge/edit/${badge.id}`}>
+                      <Link href="/admin/badge/1">
                         <button className="btn btn-xs btn-info">Edit</button>
-                      </link>
+                      </Link>
 
                       <button className="btn btn-xs btn-error">Hapus</button>
                     </td>

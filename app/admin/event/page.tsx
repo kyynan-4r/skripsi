@@ -1,20 +1,23 @@
 import { AdminLeft } from "@/app/_components/adminLeft";
+import Link from "next/link";
 
 export default function Event() {
   return (
     <>
-      <main className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+      <main className="flex lg:flex-row flex-col bg-gray-100 min-h-screen">
         <AdminLeft />
-        <div className="p-6 rounded-lg shadow-md w-screen">
-          <h2 className="text-2xl font-bold mb-6">
+        <div className="shadow-md p-6 rounded-lg w-screen">
+          <h2 className="mb-6 font-bold text-2xl">
             📅 Manajemen Event Komunitas
           </h2>
 
           {/* Tombol Tambah Event */}
           <div className="flex justify-end mb-4">
-            <button className="btn btn-primary btn-sm">
-              ➕ Tambah Event Baru
-            </button>
+            <Link href="/admin/event/add">
+              <button className="btn btn-primary btn-sm">
+                ➕ Tambah Event
+              </button>
+            </Link>
           </div>
 
           {/* Tabel Event */}
@@ -25,8 +28,7 @@ export default function Event() {
                   <th>📛 Judul</th>
                   <th>🗓️ Tanggal</th>
                   <th>🎖️ Badge Hadiah</th>
-                  <th>📌 Status</th>
-                  <th>👥 Peserta</th>
+                  <th>📌 Status Event</th>
                   <th>⚙️ Aksi</th>
                 </tr>
               </thead>
@@ -40,13 +42,11 @@ export default function Event() {
                   <td>
                     <span className="badge badge-success">Aktif</span>
                   </td>
-                  <td>12 peserta</td>
                   <td className="space-x-1">
                     <button className="btn btn-xs btn-info">Detail</button>
                     <button className="btn btn-xs btn-warning">
-                      Nonaktifkan
+                      Tutup Event
                     </button>
-                    <button className="btn btn-xs btn-error">Hapus</button>
                   </td>
                 </tr>
                 <tr>
@@ -60,10 +60,10 @@ export default function Event() {
                   <td>
                     <span className="badge badge-neutral">Selesai</span>
                   </td>
-                  <td>28 peserta</td>
                   <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
-                    <button className="btn btn-xs btn-ghost">Hapus</button>
+                     <Link href="/admin/event/1">
+                      <button className="btn btn-xs btn-info">Detail</button>
+                    </Link>
                   </td>
                 </tr>
               </tbody>

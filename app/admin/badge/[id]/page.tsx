@@ -1,20 +1,35 @@
 "use client";
-import { useState } from "react";
+import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
-export default function TambahBadgeEvent() {
+export default function EditBadgeEvent() {
+  const { id } = useParams();
+
+  // Dummy data, nanti ganti dari fetch API by ID
   const [nama, setNama] = useState("");
   const [deskripsi, setDeskripsi] = useState("");
 
+  useEffect(() => {
+    // Simulasi fetch data dari ID
+    // Nanti bisa ganti ini dengan ambil data dari server
+    const dataDummy = {
+      nama: "🎖️ Peserta Ramadan 2025",
+      deskripsi: "Diberikan kepada pengguna yang ikut Event Ramadan 2025.",
+    };
+
+    setNama(dataDummy.nama);
+    setDeskripsi(dataDummy.deskripsi);
+  }, [id]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Di sini nanti bisa kirim data ke server
-    console.log({ nama, deskripsi });
-    alert("Badge berhasil ditambahkan!");
+    console.log({ id, nama, deskripsi });
+    alert("Badge event berhasil diperbarui!");
   };
 
   return (
     <div className="bg-white shadow mx-auto mt-10 p-6 rounded-xl max-w-xl">
-      <h2 className="mb-6 font-bold text-2xl">🎖️ Tambah Badge Event</h2>
+      <h2 className="mb-6 font-bold text-2xl">✏️ Edit Badge Event</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Input Nama Badge */}
@@ -24,7 +39,6 @@ export default function TambahBadgeEvent() {
           </label>
           <input
             type="text"
-            placeholder="Contoh: Peserta Ramadan 2025"
             className="input-bordered w-full input"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
@@ -32,14 +46,13 @@ export default function TambahBadgeEvent() {
           />
         </div>
 
-        {/* Input Deskripsi Badge */}
+        {/* Input Deskripsi */}
         <div>
           <label className="label">
             <span className="font-semibold label-text">Deskripsi Badge</span>
           </label>
           <textarea
             className="textarea-bordered w-full textarea"
-            placeholder="Deskripsi singkat tentang badge"
             rows={4}
             value={deskripsi}
             onChange={(e) => setDeskripsi(e.target.value)}
@@ -47,10 +60,10 @@ export default function TambahBadgeEvent() {
           />
         </div>
 
-        {/* Tombol Submit */}
+        {/* Tombol Simpan */}
         <div className="text-right">
           <button type="submit" className="btn btn-primary">
-            Tambahkan Badge
+            Simpan Perubahan
           </button>
         </div>
       </form>

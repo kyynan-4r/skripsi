@@ -38,8 +38,8 @@ export default function Pengguna() {
                       className="rounded-full w-10 h-10"
                     />
                   </td>
-                  <td>@ayuDesign</td>
-                  <td>ayu@email.com</td>
+                  <td>wahyudi</td>
+                  <td>wahyudi@email.com</td>
                   <td>User</td>
                   <td>
                     <span className="badge badge-success">Aktif</span>

@@ -1,18 +1,21 @@
 import { AdminLeft } from "@/app/_components/adminLeft";
+import Link from "next/link";
 
 export default function Badge() {
   return (
     <>
-      <main className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+      <main className="flex lg:flex-row flex-col bg-gray-100 min-h-screen">
         <AdminLeft />
-        <div className="p-6 rounded-lg shadow-md w-screen">
-          <h2 className="text-2xl font-bold mb-6">📢 Manajemen Pengumuman</h2>
+        <div className="shadow-md p-6 rounded-lg w-screen">
+          <h2 className="mb-6 font-bold text-2xl">📢 Manajemen Pengumuman</h2>
 
           {/* Tombol Tambah */}
           <div className="flex justify-end mb-4">
-            <button className="btn btn-primary btn-sm">
-              ➕ Buat Pengumuman
-            </button>
+            <Link href="/admin/pengumuman/add">
+              <button className="btn btn-primary btn-sm">
+                ➕ Tambah Badge
+              </button>
+            </Link>
           </div>
 
           {/* Tabel Pengumuman */}
@@ -21,6 +24,7 @@ export default function Badge() {
               <thead className="bg-base-200">
                 <tr>
                   <th>📛 Judul</th>
+                  <th>Isi Pengumuman</th>
                   <th>📅 Tanggal</th>
                   <th>📌 Status</th>
                   <th>⚙️ Aksi</th>
@@ -29,12 +33,15 @@ export default function Badge() {
               <tbody>
                 <tr>
                   <td>Fitur Komentar Sudah Tersedia!</td>
+                  <td>Fitur komentar udah tersedia nih, gas cobain</td>
                   <td>23 Juni 2025</td>
                   <td>
                     <span className="badge badge-success">Aktif</span>
                   </td>
                   <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
+                    <Link href="/admin/pengumuman/1">
+                      <button className="btn btn-xs btn-info">Edit</button>
+                    </Link>
                     <button className="btn btn-xs btn-warning">
                       Nonaktifkan
                     </button>
@@ -43,12 +50,13 @@ export default function Badge() {
                 </tr>
                 <tr>
                   <td>Maintenance Server</td>
+                  <td>Website sedang dalam perbaikan, sabar ya</td>
                   <td>18 Juni 2025</td>
                   <td>
                     <span className="badge badge-neutral">Nonaktif</span>
                   </td>
                   <td className="space-x-1">
-                    <button className="btn btn-xs btn-info">Detail</button>
+                    <button className="btn btn-xs btn-info">Edit</button>
                     <button className="btn btn-xs btn-ghost">Hapus</button>
                   </td>
                 </tr>
