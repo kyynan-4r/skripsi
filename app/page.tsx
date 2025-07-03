@@ -6,9 +6,10 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="flex justify-between gap-4 bg-blue-100 p-4">
-        <LeftNav />
-
+      <main className="flex lg:flex-row flex-col justify-between gap-4 bg-blue-100 p-4">
+        <aside className="hidden lg:block w-60">
+          <LeftNav />
+        </aside>
         <div className="space-y-4">
           {[1, 2, 3, 4, 5].map((index) => (
             <div key={index} className="w-136">
@@ -172,8 +173,9 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+          <RightNav />
 
-        <RightNav />
+        
       </main>
     </>
   );
